@@ -1,0 +1,142 @@
+/* 기본 리셋 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #2f80ed;
+  --secondary: #56ccf2;
+  --bg-light: #fafafa;
+  --text-main: #333;
+  --card-bg: #ffffff;
+  --radius: 0.75rem;
+  --shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  --space: 1rem;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  line-height: 1.6;
+  background: var(--bg-light);
+  color: var(--text-main);
+  padding-bottom: 4rem;
+}
+
+/* 헤더 */
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+}
+
+header h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+header .subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+/* 내비 */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  transition: opacity 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  opacity: 0.75;
+}
+
+/* 카드 공통 */
+.card {
+  background: var(--card-bg);
+  margin: calc(var(--space) * 1.5) auto;
+  padding: calc(var(--space) * 2);
+  width: min(90%, 60rem);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  margin: 1rem 0 0.4rem;
+}
+
+.card p,
+.card li {
+  margin: 0.25rem 0;
+}
+
+.card blockquote {
+  background: #edf5ff;
+  border-left: 4px solid var(--primary);
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+  border-radius: var(--radius);
+  font-style: italic;
+}
+
+/* info 리스트 */
+.info-list li + li {
+  margin-top: 0.35rem;
+}
+.info-list strong {
+  width: 5.2rem;
+  display: inline-block;
+  color: var(--primary);
+}
+
+/* details 토글 */
+details {
+  margin-top: 0.5rem;
+}
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+details[open] summary::after {
+  content: " ▲";
+  font-size: 0.8rem;
+}
+details summary::after {
+  content: " ▼";
+  font-size: 0.8rem;
+  transition: transform 0.2s;
+}
+
+/* 푸터 */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 2rem 0 1rem;
+  color: #777;
+}
